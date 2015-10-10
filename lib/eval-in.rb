@@ -9,9 +9,6 @@ require "eval-in/exceptions"
 # @author William Woodruff
 # @since 0.0.1
 module EvalIn
-	# @private
-	VERSION = "0.0.1".freeze
-
 	# Evaluate some code in a given language.
 	# @example
 	#  EvalIn.eval(:ruby, 'puts "Hello, World"') # => #<EvalIn::Result:0xNN>
