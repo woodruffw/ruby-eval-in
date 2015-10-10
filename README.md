@@ -1,6 +1,9 @@
 ruby-eval-in
 ============
 
+[![Gem Version](https://badge.fury.io/rb/ruby-eval-in.svg)](http://badge.fury.io/rb/ruby-eval-in)
+[![Build Status](https://drone.io/github.com/woodruffw/ruby-eval-in/status.png)](https://drone.io/github.com/woodruffw/ruby-eval-in/latest)
+
 A basic Ruby interface to the [eval.in](https://eval.in) online evaluation
 service.
 
