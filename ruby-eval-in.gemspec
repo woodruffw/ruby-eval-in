@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
 	s.name = 'ruby-eval-in'
 	s.version = EvalIn::VERSION.dup
 	s.date = '2015-08-07'
-	s.required_ruby_version = '>= 1.9.0'
+	s.required_ruby_version = '>= 2.0.0'
 	s.summary = 'ruby-eval-in - A Ruby interface to https://eval.in/.'
 	s.description = 'A Ruby interface to https://eval.in/.'
 	s.authors = ['William Woodruff']
