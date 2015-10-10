@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'eval-in'
+
+def usage
+	abort("Usage: #{$PROGRAM_NAME} <language> <code>")
+end
+
+lang, code = ARGV.shift(2)
+
+usage if lang.nil? || code.nil?
+
+print EvalIn.eval(lang, code).output
