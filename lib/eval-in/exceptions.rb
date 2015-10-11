@@ -3,6 +3,13 @@ module EvalIn
 	class EvalInError < RuntimeError
 	end
 
+	# Raised when an error occurs during connection.
+	class ConnectionError < EvalInError
+		def initialize(error)
+			super "Connection error: #{error.to_s}"
+		end
+	end
+
 	# Raised when EvalIn.{EvalIn.eval} is given a bad input language.
 	class BadLanguageError < EvalInError
 		def initialize(lang)

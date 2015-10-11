@@ -1,12 +1,12 @@
 require 'nokogiri'
-require 'mechanize'
+require 'net/http'
 require 'uri'
 
 module EvalIn
 	# A representation of a result produced by an eval.in query.
 	class Result
 		# @private
-		URL = "https://eval.in"
+		URL = URI("https://eval.in")
 
 		# The languages supported by eval.in.
 		# Any of these keys or values will work for the lang parameter in
@@ -67,35 +67,22 @@ module EvalIn
 
 			@lang = lang
 			@code = code
-			@html = get_page
-			@output = get_output
-			@status = get_status
-			@url = get_url
-		end
 
-		private
+			result = Net::HTTP.post_form(URL,
+				"execute" => "on",
+				"lang" => lang,
+				"code" => code
+			)
 
-		def get_page
-			mech = Mechanize.new
-			page = mech.get(URL)
-			form = page.forms.first
+			if result.is_a? Net::HTTPFound
+				@url = URI(result["location"])
 
-			form.field_with(:name => "code").value = @code
-			form.field_with(:name => "lang").value = @lang
-			Nokogiri::HTML(mech.submit(form).body)
-		end
-
-		def get_output
-			@html.css("pre").last.text
-		end
-
-		def get_status
-			@html.css("p")[1].text
-		end
-
-		def get_url
-			number = @html.css("h2").first.text.delete("Paste \#")
-			URI("https://eval.in/#{number}")
+				html = Nokogiri::HTML(Net::HTTP.get(@url))
+				@output = html.css("pre").last.text
+				@status = html.css("p")[1].text
+			else
+				raise ConnectionError.new(result)
+			end
 		end
 	end
 end
