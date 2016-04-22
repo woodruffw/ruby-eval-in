@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name = 'ruby-eval-in'
-	s.version = '0.0.2'
+	s.version = '0.0.3'
 	s.date = '2015-08-07'
 	s.required_ruby_version = '>= 2.0.0'
 	s.summary = 'ruby-eval-in - A Ruby interface to https://eval.in/.'
