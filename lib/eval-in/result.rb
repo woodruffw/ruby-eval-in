@@ -29,6 +29,7 @@ module EvalIn
       "perl" => "perl/perl-5.20.0",
       "python" => "python/cpython-3.4.1",
       "python2" => "python/cpython-2.7.8",
+      "racket" => "racket/racket-6.10.1",
       "ruby" => "ruby/mri-2.4",
       "slash" => "slash/slash-head",
       "nasm" => "assembly/nasm-2.07",
