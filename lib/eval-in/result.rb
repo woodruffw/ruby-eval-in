@@ -77,6 +77,9 @@ module EvalIn
       raise ConnectionError, result unless result.is_a? Net::HTTPFound
 
       @url = URI(result["location"])
+      html = Nokogiri::HTML(Net::HTTP.get(@url))
+      @output = html.css("pre").last.text
+      @status = html.css("p")[1].text
     end
   end
 end
