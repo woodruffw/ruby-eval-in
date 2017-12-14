@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'minitest'
-gem 'nokogiri'
-gem 'mechanize'
+source "https://rubygems.org"
+
+gem "minitest"
+gem "nokogiri"
+gem "rake"
