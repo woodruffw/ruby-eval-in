@@ -8,7 +8,7 @@ require_relative "eval-in/exceptions"
 # @since 0.0.1
 module EvalIn
   # The library's current version.
-  VERSION = "0.0.6"
+  VERSION = "0.0.7"
 
   # Evaluate some code in a given language.
   # @example
