@@ -5,7 +5,7 @@ require_relative "lib/eval-in"
 Gem::Specification.new do |s|
   s.name                  = "ruby-eval-in"
   s.version               = EvalIn::VERSION
-  s.required_ruby_version = ">= 2.1"
+  s.required_ruby_version = ">= 2.3"
   s.summary               = "ruby-eval-in - A Ruby interface to https://eval.in/."
   s.description           = "A Ruby interface to https://eval.in/."
   s.authors               = ["William Woodruff"]
