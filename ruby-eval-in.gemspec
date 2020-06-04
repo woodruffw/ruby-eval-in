@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files                 = Dir["LICENSE", "README.md", ".yardopts", "lib/**/*.rb"]
   s.bindir                = "bin"
   s.homepage              = "https://github.com/woodruffw/ruby-eval-in"
-  s.license               = "MIT"
+  s.license               = "Nonstandard"
 
   s.add_dependency "nokogiri"
   s.executables << "eval-in"

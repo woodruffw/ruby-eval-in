@@ -1,6 +1,7 @@
 ruby-eval-in
 ============
 
+![license](https://raster.shields.io/badge/license-MIT%20with%20restrictions-green.png)
 [![Gem Version](https://badge.fury.io/rb/ruby-eval-in.svg)](http://badge.fury.io/rb/ruby-eval-in)
 [![Build Status](https://travis-ci.org/woodruffw/ruby-eval-in.svg?branch=master)](https://travis-ci.org/woodruffw/ruby-eval-in)
 
