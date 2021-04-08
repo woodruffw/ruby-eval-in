@@ -5,6 +5,10 @@ ruby-eval-in
 [![Gem Version](https://badge.fury.io/rb/ruby-eval-in.svg)](http://badge.fury.io/rb/ruby-eval-in)
 [![Build Status](https://travis-ci.org/woodruffw/ruby-eval-in.svg?branch=master)](https://travis-ci.org/woodruffw/ruby-eval-in)
 
+
+**WARNING:** The web service exposed by this gem is no longer online, and this gem is no longer
+maintained.
+
 A basic Ruby interface to the [eval.in](https://eval.in) online evaluation
 service.
 
